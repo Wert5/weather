@@ -21,7 +21,7 @@ public class Weather {
 		
 		while(alt>=0){
 			if(alt>95000){
-				vertVel=
+				vertVel=-11.583
 			}else{
 				vertVel=
 			}

@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 
 public class Weather {
 	public static double alt=0;
@@ -14,26 +16,40 @@ public class Weather {
 	public static double windUp=0;
 	public static double pres=1;
 	public static double prsCon=0.5;
+	public static double upVel=0;
+	public static double downVel=0;
+	public static boolean popped=false;
 	/**
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		
+		Scanner in=new Scanner(System.in);
+		System.out.println("Up Velocity:");
+		upVel=in.nextDouble();
+		System.out.println("Down Velocity:");
+		downVel=in.nextDouble();//-11.583
+		System.out.println("North Wind Velocity:");
+		windN=in.nextDouble();
+		System.out.println("East Wind Velocity:");
+		windE=in.nextDouble();
+		vertVel=upVel;
 		while(alt>=0){
-			if(alt>95000){
-				vertVel=-11.583
-			}else{
-				vertVel=
+			if(alt>95000 && !popped){
+				vertVel=downVel;
+				popped=true;
+				System.out.println("-------POPPED-------");
 			}
-			vertVel=
 			alt+=vertVel;
-			nVel+=windN;
-			eVel+=windE;
+			nVel=windN;
+			eVel=windE;
 			nPos+=nVel;
 			ePos+=eVel;
 			
 			printStats();
 		}
+		
+		System.out.println("\nNorth Position: "+nPos);
+		System.out.println("\nEast Position: "+ePos);
 	}
 	
 	public static void printStats(){

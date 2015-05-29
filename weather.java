@@ -58,9 +58,9 @@ public class Weather {
 		System.out.println("nVel:"+nVel);
 		System.out.println("nPos:"+nPos);
 		System.out.println("ePos:"+ePos);
-		System.out.println("balMass:"+balMass);
-		System.out.println("balVol:"+balVol);
-		System.out.println("balDens:"+balDens);
+		//System.out.println("balMass:"+balMass);
+		//System.out.println("balVol:"+balVol);
+		//System.out.println("balDens:"+balDens);
 		System.out.println("windN:"+windN);
 		System.out.println("windE:"+windE);
 		System.out.println("WindUp:"+windUp);
